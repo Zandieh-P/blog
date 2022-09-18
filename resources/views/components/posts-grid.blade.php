@@ -1,4 +1,4 @@
-@(['posts'])
+@props(['posts'])
 <x-post-featured-card :post="$posts[0]"/>
 @if($posts->count()>1)
     <div class="lg:grid lg:grid-cols-6">

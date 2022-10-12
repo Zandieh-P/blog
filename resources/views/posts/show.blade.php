@@ -49,6 +49,7 @@
                         {!! $post->body !!}
                     </div>
                 </div>
+
             </article>
         </main>
     </section>

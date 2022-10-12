@@ -1,7 +1,8 @@
 <!doctype html>
 
 <title>Laravel Blog</title>
-<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+{{--<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">--}}
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -15,9 +16,19 @@
             </a>
         </div>
 
-        <div class="mt-8 md:mt-0">
-            <a href="/" class="text-xs font-bold uppercase">Home Page</a>
-
+        <div class="mt-8 md:mt-0 flex items-center">
+            {{--@guest<a href="/register" class="text-xs font-bold uppercase">Register</a>@endguest--}}
+            {{--@unless(auth()->check())<a href="/register" class="text-xs font-bold uppercase">Register</a>@endunless--}}
+            @auth
+                <span class="text-xs font-bold uppercase">Welcome, {{auth()->user()->name}}!</span>
+                <form action="/logout" method="POST" class="text-xs font-semibold text-blue-500 ml-6">
+                    @csrf
+                    <button type="submit">Log Out</button>
+                </form>
+            @else
+                <a href="/register" class="text-xs font-bold uppercase">Register</a>
+                <a href="/login" class="ml-6 text-xs font-bold uppercase">Log In</a>
+            @endauth
             <a href="#" class="bg-blue-500 ml-3 rounded-full text-xs font-semibold text-white uppercase py-3 px-5">
                 Subscribe for Updates
             </a>
@@ -52,4 +63,5 @@
         </div>
     </footer>
 </section>
+<x-flash/>
 </body>

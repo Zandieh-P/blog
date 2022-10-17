@@ -14,11 +14,10 @@
                         <img src="/images/lary-avatar.svg" alt="Lary avatar">
                         <div class="ml-3 text-left">
                             <a href="?author={{$post->author->username}}">{{$post->author->name}}</a>
-{{--                            <a href="/authors/{{$post->author->username}}">{{$post->author->name}}</a>--}}
+                            {{--                            <a href="/authors/{{$post->author->username}}">{{$post->author->name}}</a>--}}
                         </div>
                     </div>
                 </div>
-
                 <div class="col-span-8">
                     <div class="hidden lg:flex justify-between mb-6">
                         <a href="/"
@@ -49,7 +48,12 @@
                         {!! $post->body !!}
                     </div>
                 </div>
-
+                <section class="col-span-4"></section>
+                <section class="col-span-8 mt-10 space-y-6">
+                    <x-post-comment/>
+                    <x-post-comment/>
+                    <x-post-comment/>
+                </section>
             </article>
         </main>
     </section>

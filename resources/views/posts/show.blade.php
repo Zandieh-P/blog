@@ -50,9 +50,10 @@
                 </div>
                 <section class="col-span-4"></section>
                 <section class="col-span-8 mt-10 space-y-6">
-                    <x-post-comment/>
-                    <x-post-comment/>
-                    <x-post-comment/>
+                    @foreach($post->comments as $comment)
+{{--                        {{$comment->author->username}}--}}
+                        <x-post-comment :comment="$comment"></x-post-comment>
+                    @endforeach
                 </section>
             </article>
         </main>

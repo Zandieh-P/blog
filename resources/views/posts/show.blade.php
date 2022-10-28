@@ -50,8 +50,9 @@
                 </div>
                 <section class="col-span-4"></section>
                 <section class="col-span-8 mt-10 space-y-6">
+                    @include('posts._add-comment-form')
                     @foreach($post->comments as $comment)
-{{--                        {{$comment->author->username}}--}}
+                        {{--                        {{$comment->author->username}}--}}
                         <x-post-comment :comment="$comment"></x-post-comment>
                     @endforeach
                 </section>

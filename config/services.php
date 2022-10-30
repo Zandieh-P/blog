@@ -30,4 +30,17 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'mailchimp'=>[
+        'key'=>env('MAILCHIMP_KEY'),
+        'lists'=>[
+            'subscribers'=>env('MAILCHIMP_LIST_SUBSCRIBERS')
+        ]
+    ],
+
 ];
+
+// Mailchimp Client Services
+// address: https://mailchimp.com/
+// email: vimebow377@24rumen.com
+// ID: vimebow377
+// Pass: A123456789@b

@@ -31,16 +31,15 @@ return [
     ],
 
     'mailchimp'=>[
-        'key'=>env('MAILCHIMP_KEY'),
-        'lists'=>[
-            'subscribers'=>env('MAILCHIMP_LIST_SUBSCRIBERS')
-        ]
+        'key'=>env('MAILCHIMP_KEY')
+//        ,'lists'=>[
+//            'subscribers'=>env('MAILCHIMP_LIST_SUBSCRIBERS')
+//        ]
     ],
 
 ];
 
 // Mailchimp Client Services
-// address: https://mailchimp.com/
-// email: vimebow377@24rumen.com
-// ID: vimebow377
-// Pass: A123456789@b
+// address: https://www.mailchimp.com/
+// email & ID: miwena9843@lance7.com
+// Pass: sakjdhdashA9@zd

@@ -2,7 +2,6 @@
 
 namespace App\Services;
 
-use MailchimpMarketing\ApiClient;
 
 class Newsletter
 {
@@ -24,11 +23,11 @@ class Newsletter
 
     public function client()
     {
-        $mailchimp = new ApiClient();
+//        $mailchimp = new ApiClient();
 
-        return $mailchimp->setConfig([
-            'apiKey' => config('services.mailchimp.key'),
-            'server' => 'us17'
-        ]);
+//        return $mailchimp->setConfig([
+//            'apiKey' => config('services.mailchimp.key'),
+//            'server' => 'us21'
+//        ]);
     }
 }

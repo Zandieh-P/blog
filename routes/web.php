@@ -28,6 +28,7 @@ Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth'
 //'admin': user should be logged in and should have 'mzp' username
 Route::get('admin/posts/create',[PostController::class,'create'])->middleware('admin');
 Route::post('admin/posts',[PostController::class,'store'])->middleware('admin');
+Route::post('admin/posts',[PostController::class,'store'])->middleware('admin');
 
 /*Route::get('/', function () {
     \Illuminate\Support\Facades\DB::listen(function ($query) {

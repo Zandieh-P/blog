@@ -6,6 +6,6 @@
               id="{{$name}}"
 {{--              content="{{old('excerpt')}}"--}}
               required
-    >{{old($name)}}</textarea>
+    >{{$slot ?? old($name)}}</textarea>
     <x-form.error name="{{$name}}"></x-form.error>
 </x-form.field>
